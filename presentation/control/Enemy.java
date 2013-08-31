@@ -336,41 +336,4 @@ public class Enemy extends NonStaticCell {
             default: return 'U';
         }
     }
-
-//    @Override
-//    public boolean isMovePossible(Cell cell, char orientation) {
-//        //TODO Luís, só comentei isto porque estava em erro e queria dar-lhe mais um bocado
-//        if(wallPass==true){
-//            switch(orientation){
-//                case 'U': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//                case 'D': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//                case 'R': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//                case 'L': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//            }
-//        }else{
-//            switch(orientation){
-//                case 'U': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//                case 'D': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//                case 'R': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//                case 'L': if(/*board x y não for parede fronteira ou enemy ou bomba*/){
-//                    return true;
-//                }   break;
-//            }
-//        }
-//    }
-
 }
