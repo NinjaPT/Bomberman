@@ -30,7 +30,6 @@ public class Enemy extends Player {
     }
 
     private void translateEnemyType(int enemyType){
-        //
         /*
         *        Nome        Pontos  Velocidade  Inteligência    PassaParedes
         *  1     Balloom     100     lento       baixa           não
@@ -169,11 +168,7 @@ public class Enemy extends Player {
                     return super.getDirection();
                 }else{
                     char[] array=shortestPath(board, curr_player);
-                    if(isEnemy(board, array[0])==true){
-                        return
-                    }else{
-                        return array[0];
-                    }
+                    return isPlaceEnemy(board, )
                 }
             }
             case (3):{
