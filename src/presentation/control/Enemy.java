@@ -1,14 +1,16 @@
 package presentation.control;//package control;
 
+import presentation.dijkstra.DijkstraAlgorithm;
 import presentation.dijkstra.Edge;
-import presentation.dijkstra.Vertex;
 import presentation.dijkstra.Graph;
+import presentation.dijkstra.Vertex;
 import presentation.swing.BoardViewer;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+
 
 public class Enemy extends Player {
 //      x=29
@@ -222,6 +224,9 @@ public class Enemy extends Player {
         List<Vertex> nodes=new ArrayList<Vertex>();
         List<Edge> edges=new ArrayList<Edge>();
         List<Cell> walls=new ArrayList<Cell>();
+        int e_x, e_y;
+        e_x=super.getPosX()+1;
+        e_y=super.getPosY()+1;
 
 
         for(int i=0; i<board.length;i++){
@@ -267,9 +272,18 @@ public class Enemy extends Player {
             }
 
         }
-
-
         Graph graph=new Graph(nodes,edges);
+        DijkstraAlgorithm dijkstra = new DijkstraAlgorithm(graph);
+        dijkstra.execute(nodes.get(e_x*e_y));
+        LinkedList<Vertex> path = dijkstra.getPath(nodes.get(10));
+        int x=path.getFirst().x;
+        int y=path.getFirst().y;
+        if((e_x-x)==0){
+        }
+
+
+        char array[]={'a','b'};
+        return array;
     }
 
     private char isPlaceEnemy(Cell[][] board, char direction){
@@ -313,11 +327,6 @@ public class Enemy extends Player {
         }
     }
 
-    private void addLane(String laneId, int sourceLocNo, int destLocNo,
-                         int duration) {
-        Edge lane = new Edge(laneId,nodes.get(sourceLocNo), nodes.get(destLocNo), duration);
-        edges.add(lane);
-   }
 //    @Override
 //    public boolean isMovePossible(Cell cell, char orientation) {
 //        //TODO Luís, só comentei isto porque estava em erro e queria dar-lhe mais um bocado
