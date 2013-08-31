@@ -18,7 +18,7 @@ public class Game {
 
     /****************************************************************************************/
 
-    // JOGADA
+    //  JOGADA
 
     /****************************************************************************************/
     public void setPlay(){
@@ -143,49 +143,49 @@ public class Game {
         o ecrã com as flames
         */
         //ir buscar o tamanho da explosão
-        int flame = bomb.getFlame();
+        int flame = 0;
         //estas variáveis servem para quando se bater em algo, a chama não avança mais para esse lado
         boolean left=false, right=false, up=false, down=false;
         //decrementar o tamanho da explosão até esta ser zero
-        while (flame != 0){
+        while (flame != bomb.getFlame()){
+            flame++;
             if (!left)
                 try {
-                    if (board[bomb.getPosY()][bomb.getPosX() - 1].getClass() != EmptyCell.class)
+                    if (board[bomb.getPosY()][bomb.getPosX() - flame].getClass() != EmptyCell.class)
                         left=true;
-                    if (board[bomb.getPosY()][bomb.getPosX() - 1].getClass() != SolidPath.class)
-                        board[bomb.getPosY()][bomb.getPosX()-1] = new Flame(bomb.getPosX()-1,bomb.getPosY(), board[bomb.getPosY()][bomb.getPosX()-1]);
+                    if (board[bomb.getPosY()][bomb.getPosX() - flame].getClass() != SolidPath.class)
+                        board[bomb.getPosY()][bomb.getPosX()-flame] = new Flame(bomb.getPosX()-flame,bomb.getPosY(), board[bomb.getPosY()][bomb.getPosX()-flame]);
                 } catch (Exception e){
                     //Do nothing
                 }
             if (!right)
                 try{
-                    if (board[bomb.getPosY()][bomb.getPosX() + 1].getClass() != EmptyCell.class)
+                    if (board[bomb.getPosY()][bomb.getPosX() + flame].getClass() != EmptyCell.class)
                         right=true;
-                    if (board[bomb.getPosY()][bomb.getPosX() + 1].getClass() != SolidPath.class)
-                        board[bomb.getPosY()][bomb.getPosX()+1] = new Flame(bomb.getPosX()+1,bomb.getPosY(), board[bomb.getPosY()][bomb.getPosX()+1]);
+                    if (board[bomb.getPosY()][bomb.getPosX() + flame].getClass() != SolidPath.class)
+                        board[bomb.getPosY()][bomb.getPosX()+flame] = new Flame(bomb.getPosX()+flame,bomb.getPosY(), board[bomb.getPosY()][bomb.getPosX()+flame]);
                 } catch (Exception e){
                     //Do nothing
                 }
             if (!up)
                 try{
-                    if (board[bomb.getPosY()-1][bomb.getPosX()].getClass() != EmptyCell.class)
+                    if (board[bomb.getPosY()-flame][bomb.getPosX()].getClass() != EmptyCell.class)
                         up=true;
-                    if (board[bomb.getPosY()-1][bomb.getPosX()].getClass() != SolidPath.class)
-                        board[bomb.getPosY()-1][bomb.getPosX()] = new Flame(bomb.getPosX(),bomb.getPosY()-1, board[bomb.getPosY()-1][bomb.getPosX()]);
+                    if (board[bomb.getPosY()-flame][bomb.getPosX()].getClass() != SolidPath.class)
+                        board[bomb.getPosY()-flame][bomb.getPosX()] = new Flame(bomb.getPosX(),bomb.getPosY()-flame, board[bomb.getPosY()-flame][bomb.getPosX()]);
                 } catch (Exception e){
                     //Do nothing
                 }
             if (!down)
                 try{
-                    if (board[bomb.getPosY()+1][bomb.getPosX()].getClass() != EmptyCell.class)
+                    if (board[bomb.getPosY()+flame][bomb.getPosX()].getClass() != EmptyCell.class)
                         down=true;
-                    if (board[bomb.getPosY()+1][bomb.getPosX()].getClass() != SolidPath.class)
-                        board[bomb.getPosY()+1][bomb.getPosX()] = new Flame(bomb.getPosX(),bomb.getPosY()+1, board[bomb.getPosY()+1][bomb.getPosX()]);
+                    if (board[bomb.getPosY()+flame][bomb.getPosX()].getClass() != SolidPath.class)
+                        board[bomb.getPosY()+flame][bomb.getPosX()] = new Flame(bomb.getPosX(),bomb.getPosY()+flame, board[bomb.getPosY()+flame][bomb.getPosX()]);
                 } catch (Exception e){
                     //Do nothing
                 }
 
-            flame--;
         }
         //no sitio onde está a bomba passa a flame também
         board[bomb.getPosY()][bomb.getPosX()] = new Flame(bomb.getPosX(),bomb.getPosY(), new EmptyCell(bomb.getPosX(),bomb.getPosY()));

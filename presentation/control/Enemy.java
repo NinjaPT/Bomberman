@@ -4,6 +4,7 @@ import presentation.dijkstra.DijkstraAlgorithm;
 import presentation.dijkstra.Edge;
 import presentation.dijkstra.Graph;
 import presentation.dijkstra.Vertex;
+import presentation.swing.BoardViewer;
 import presentation.swing.GameViewer;
 
 import java.util.ArrayList;
@@ -11,8 +12,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+
 public class Enemy extends NonStaticCell {
-//teste
 //      x=29
 //      y=11
 //    0	    1	2	3	4	5	6	7	8	9	10
