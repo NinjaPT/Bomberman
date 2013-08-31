@@ -10,11 +10,15 @@ package presentation.dijkstra;
 public class Vertex {
     final private String id;
     final private String name;
+    final public int x;
+    final public int y;
 
 
-    public Vertex(String id, String name) {
+    public Vertex(String id, String name, int x, int y) {
         this.id = id;
         this.name = name;
+        this.x=x;
+        this.y=y;
     }
     public String getId() {
         return id;
