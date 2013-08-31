@@ -30,6 +30,7 @@ public class Enemy extends Player {
     }
 
     private void translateEnemyType(int enemyType){
+        //
         /*
         *        Nome        Pontos  Velocidade  Inteligência    PassaParedes
         *  1     Balloom     100     lento       baixa           não
