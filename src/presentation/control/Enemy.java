@@ -168,14 +168,14 @@ public class Enemy extends Player {
                     return super.getDirection();
                 }else{
                     char[] array=shortestPath(board, curr_player);
-                    return isPlaceEnemy(board, )
+                    return isPlaceEnemy(board, array[0]);
                 }
             }
             case (3):{
                 //Encontrar o caminho mais curto??
                 //Falta validação de inimigo
                 char[] array=shortestPath(board, curr_player);
-                return array[0];
+                return isPlaceEnemy(board, array[0]);
             }
             default: return 'U';
         }
