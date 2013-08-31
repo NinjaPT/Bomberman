@@ -1,6 +1,7 @@
 package presentation.control;
 
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,6 +17,11 @@ public class Brick extends StaticCell {
     }
     //encontra-se com +1 pois apenas temos o interior do board
     public void printCell(BoardViewer viewer){
+        viewer.setBrick(super.getPosX()+1, super.getPosY()+1);
+    }
+
+    @Override
+    public void printCell(GameViewer viewer) {
         viewer.setBrick(super.getPosX()+1, super.getPosY()+1);
     }
 }

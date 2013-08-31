@@ -1,6 +1,7 @@
 package presentation.control;
 
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +15,13 @@ public class EmptyCell extends StaticCell {
     public EmptyCell(int posX, int posY) {
         super(posX, posY);
     }
-    public void printCell(BoardViewer viewer){
+//    public void printCell(BoardViewer viewer){
+//        viewer.setEmpty(super.getPosX()+1, super.getPosY()+1);
+//    }
+
+
+    @Override
+    public void printCell(GameViewer viewer) {
         viewer.setEmpty(super.getPosX()+1, super.getPosY()+1);
     }
 }

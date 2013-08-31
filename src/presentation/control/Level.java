@@ -19,7 +19,7 @@ public class Level {
     }
 
     private boolean loadLevel(int level){
-        final String filename = "/home/fgalvao/Dropbox/POO_1213_V/T3/src/levels/Level_" + level;
+        final String filename = "/home/fgalvao/workspace/Bomberman/src/levels/Level_" + level;
         //final String filename = "C:\\Users\\fabio.a.galvao\\Dropbox\\POO_1213_V\\T3\\src\\levels\\Level_" + level;
         //final String filename = "C:\\Users\\Paulo Torres\\Dropbox\\POO_1213_V\\T3\\src\\levels\\level_" + level;
         //final String filename = "/home/paulo/Dropbox/POO_1213_V/T3/src/levels/Level_" + level;
@@ -58,7 +58,8 @@ public class Level {
             Scanner scanner = new Scanner(file);
             int i = 0;
             Random r = new Random();
-            char[] bonus= {'S','F','D','B'};
+            char[] bonus={'F','F','F','F'}; //para teste
+            //{'S','F','D','B'};
             while (scanner.hasNextLine()) {
                 String[] lines = scanner.nextLine().split("\\s+");
                 //for (int i = 0; i<lines.length; i++) {

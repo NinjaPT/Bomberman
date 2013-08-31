@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7418e934-791a-40b9-ab9d-15dc4ba2186c" name="Default" comment="teste">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Relatório.docx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bomberman.ipr" afterPath="$PROJECT_DIR$/Bomberman.ipr" />
+    <list default="true" id="7418e934-791a-40b9-ab9d-15dc4ba2186c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/presentation/swing/BoardViewer (Cópia em conflito de Paulo Torres 2013-08-11).java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/presentation/swing/Paths.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/swing/BoardViewer.java" afterPath="$PROJECT_DIR$/src/presentation/swing/BoardViewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Bomb.java" afterPath="$PROJECT_DIR$/src/presentation/control/Bomb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bomberman.iws" afterPath="$PROJECT_DIR$/Bomberman.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Bonus.java" afterPath="$PROJECT_DIR$/src/presentation/control/Bonus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Brick.java" afterPath="$PROJECT_DIR$/src/presentation/control/Brick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Cell.java" afterPath="$PROJECT_DIR$/src/presentation/control/Cell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/EmptyCell.java" afterPath="$PROJECT_DIR$/src/presentation/control/EmptyCell.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Enemy.java" afterPath="$PROJECT_DIR$/src/presentation/control/Enemy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Flame.java" afterPath="$PROJECT_DIR$/src/presentation/control/Flame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Game.java" afterPath="$PROJECT_DIR$/src/presentation/control/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/swing/GameViewer.java" afterPath="$PROJECT_DIR$/src/presentation/swing/GameViewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Gate.java" afterPath="$PROJECT_DIR$/src/presentation/control/Gate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Level.java" afterPath="$PROJECT_DIR$/src/presentation/control/Level.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/Player.java" afterPath="$PROJECT_DIR$/src/presentation/control/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/control/SolidPath.java" afterPath="$PROJECT_DIR$/src/presentation/control/SolidPath.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentation/Viewer.java" afterPath="$PROJECT_DIR$/src/presentation/Viewer.java" />
     </list>
     <ignored path="Bomberman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,7 +30,8 @@
     <file path="/EnemyType.java" changelist="7418e934-791a-40b9-ab9d-15dc4ba2186c" time="1377294425012" ignored="false" />
     <file path="/Game.java" changelist="7418e934-791a-40b9-ab9d-15dc4ba2186c" time="1377812691711" ignored="false" />
     <file path="/Level.java" changelist="7418e934-791a-40b9-ab9d-15dc4ba2186c" time="1377299040426" ignored="false" />
-    <file path="/Dummy.txt" changelist="7418e934-791a-40b9-ab9d-15dc4ba2186c" time="1377956824838" ignored="false" />
+    <file path="/Dummy.txt" changelist="7418e934-791a-40b9-ab9d-15dc4ba2186c" time="1377967698233" ignored="false" />
+    <file path="$PROJECT_DIR$/../Bomberman/Bomberman.iws" changelist="7418e934-791a-40b9-ab9d-15dc4ba2186c" time="1377967783291" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +94,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.49267983">
       <split-first>
         <leaf>
-          <file leaf-file-name="Enemy.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="Enemy.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/presentation/control/Enemy.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="10" selection-start="879" selection-end="879" vertical-scroll-proportion="0.018028846">
+                <state line="348" column="0" selection-start="12018" selection-end="12018" vertical-scroll-proportion="0.3872135">
                   <folding />
                 </state>
               </provider>
@@ -100,7 +115,7 @@
           <file leaf-file-name="Cell.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/presentation/control/Cell.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="39" column="129" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
+                <state line="40" column="129" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -113,7 +128,7 @@
           <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/presentation/control/Player.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="13" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+                <state line="16" column="13" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -122,7 +137,7 @@
           <file leaf-file-name="Level.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/presentation/control/Level.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="88" column="65" selection-start="3683" selection-end="3683" vertical-scroll-proportion="0.0">
+                <state line="89" column="65" selection-start="3726" selection-end="3726" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -137,10 +152,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Game.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/presentation/control/Game.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="143" column="67" selection-start="5443" selection-end="5443" vertical-scroll-proportion="0.018028846">
+                <state line="144" column="67" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.018094089">
                   <folding />
                 </state>
               </provider>
@@ -161,6 +176,7 @@
         <option value="LS" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
@@ -223,6 +239,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,7 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
+              <option name="myItemId" value="BombermanPOO" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -247,7 +264,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
+              <option name="myItemId" value="BombermanPOO" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -265,51 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="swing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dijkstra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
+              <option name="myItemId" value="BombermanPOO" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -331,7 +304,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
+              <option name="myItemId" value="BombermanPOO" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -349,21 +322,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bomberman" />
+              <option name="myItemId" value="BombermanPOO" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -380,9 +348,9 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Tester">
     <configuration default="false" name="GameViewer" type="Application" factoryName="Application" temporary="true">
@@ -431,19 +399,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -469,6 +424,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -543,6 +511,11 @@
       <created>1371851293738</created>
       <updated>1371851293738</updated>
     </task>
+    <task id="LOCAL-00001" summary="teste">
+      <created>1377967702746</created>
+      <updated>1377967702746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -569,24 +542,24 @@
     <frame x="126" y="22" width="2293" height="1418" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32846153" sideWeight="0.49933246" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819724" sideWeight="0.49933246" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32846153" sideWeight="0.5002225" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32973805" sideWeight="0.5006676" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.49968174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32973805" sideWeight="0.49933246" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896763" sideWeight="0.49933246" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.49968174" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16510904" sideWeight="0.6715385" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16510904" sideWeight="0.6702619" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28175896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896763" sideWeight="0.49968174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -596,7 +569,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
       <value>
@@ -713,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/presentation/control/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="129" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
+        <state line="40" column="129" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -734,14 +707,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/presentation/control/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+        <state line="16" column="13" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/presentation/control/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="65" selection-start="3683" selection-end="3683" vertical-scroll-proportion="0.0">
+        <state line="89" column="65" selection-start="3726" selection-end="3726" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -753,16 +726,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/presentation/control/Enemy.java">
+    <entry file="file://$PROJECT_DIR$/src/presentation/control/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="10" selection-start="879" selection-end="879" vertical-scroll-proportion="0.018028846">
+        <state line="144" column="67" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.018094089">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/presentation/control/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/presentation/control/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="67" selection-start="5443" selection-end="5443" vertical-scroll-proportion="0.018028846">
+        <state line="348" column="0" selection-start="12018" selection-end="12018" vertical-scroll-proportion="0.3872135">
           <folding />
         </state>
       </provider>

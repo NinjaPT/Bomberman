@@ -11,6 +11,7 @@ public interface Viewer
     void setBomb(int col, int row);
     void setGate(int col, int row);
     void setBonus(int col, int row, char bonusType);
+    void setFlame(int col, int row);
     void printGame();
     void play();
 }

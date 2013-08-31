@@ -1,6 +1,7 @@
 package presentation.control;
 
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,8 @@ import presentation.swing.BoardViewer;
  */
 public class Flame extends StaticCell {
     private Cell cellBackUp;
+    private boolean display= true;
+
     public Flame(int posX, int posY, Cell cellBackUp) {
         super(posX, posY);
         this.cellBackUp = cellBackUp;
@@ -19,9 +22,25 @@ public class Flame extends StaticCell {
     public Cell getCellBackUp() {
         return cellBackUp;
     }
-
+      /*
     //encontra-se com +1 pois apenas temos o interior do board
     public void printCell(BoardViewer viewer){
         viewer.setFlame(super.getPosX()+1, super.getPosY()+1);
+    }   */
+
+
+    public boolean isDisplay() {
+        return display;
     }
+
+    public void setDisplay(boolean display) {
+        this.display = display;
+    }
+
+    @Override
+    public void printCell(GameViewer viewer) {
+        viewer.setFlame(super.getPosX()+1, super.getPosY()+1);
+        display=false;
+    }
+
 }
