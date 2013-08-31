@@ -2,9 +2,9 @@ package presentation.swing;
 
 import presentation.control.Cell;
 import presentation.control.Level;
+
 import javax.swing.*;
 import java.awt.*;
-import java.net.UnknownHostException;
 
 public class BoardViewer extends JPanel
 {
@@ -53,7 +53,7 @@ public class BoardViewer extends JPanel
     private static final String GATE_PATH = "C:\\Users\\fabio.a.galvao\\Dropbox\\POO_1213_V\\T3\\images\\Bomberman_Mystery.png";
     private static final String BOMB_PATH = "C:\\Users\\fabio.a.galvao\\Dropbox\\POO_1213_V\\T3\\images\\Bomberman_Bomb.png";
     */
-
+    /*
     private static final String BRICK_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Brick.png";
     private static final String SOLID_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Solid.png";
     private static final String EMPTY_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Empty.png";
@@ -62,10 +62,24 @@ public class BoardViewer extends JPanel
     private static final String SPEED_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Speed.png";
     private static final String FLAME_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Flames.png";
     private static final String DETONATOR_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Detonator.png";
-    private static final String BOMB_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/Bomberman_Bombs.png";
+    private static final String BOMB_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Bombs.png";
     private static final String GATE_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Gate.png";
     private static final String BOMB_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Bom.jpg";
     private static final String FLAME_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Flame.png";
+    */
+
+    private static final String BRICK_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Brick.png";
+    private static final String SOLID_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Solid.png";
+    private static final String EMPTY_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Empty.png";
+    private static final String PLAYER_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_White.png";
+    private static final String ENEMY1_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Balloom.png";
+    private static final String SPEED_BONUS_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Speed.png";
+    private static final String FLAME_BONUS_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Flames.png";
+    private static final String DETONATOR_BONUS_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Detonator.png";
+    private static final String BOMB_BONUS_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Bombs.png";
+    private static final String GATE_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Gate.png";
+    private static final String BOMB_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Bom.jpg";
+    private static final String FLAME_PATH = "/Users/luissousa/Documents/prog/Bomberman/images/Bomberman_Flame.png";
 
     private ElementViewer[][] board = new ElementViewer[COLUMNS][ROWS];
 

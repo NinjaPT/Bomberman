@@ -48,55 +48,65 @@ public class Game {
                     if (!cell.isMoved()) {
                         Cell newCell;
                         char direction = cell.getDirection();
-                        if (direction == 'R') {
-                            try {
-                                newCell = board[i][j+1];
-                                if (cell.isMovePossible(newCell)) {
-                                    board[i][j+1] = cell;
-                                    board[i][j] = new EmptyCell(j,i);
-                                    cell.setNewPosition(j+1,i);
-                                }
-                            }catch (Exception e){
+                        switch(direction){
+                            case('R'): {
+                                try {
+                                    newCell = board[i][j+1];
+                                    if (cell.isMovePossible(newCell)) {
+                                        board[i][j+1] = cell;
+                                        board[i][j] = new EmptyCell(j,i);
+                                        cell.setNewPosition(j+1,i);
+                                    }
+                                }catch (Exception e){
 
+                                }
+                                break;
                             }
-                        } else if (direction == 'L') {
-                            try {
-                                newCell = board[i][j-1];
-                                if (cell.isMovePossible(newCell)) {
-                                    board[i][j-1] = cell;
-                                    board[i][j] = new EmptyCell(j,i);
-                                    cell.setNewPosition(j-1,i);
-                                }
-                            }catch (Exception e){
+                            case('L'): {
+                                try {
+                                    newCell = board[i][j-1];
+                                    if (cell.isMovePossible(newCell)) {
+                                        board[i][j-1] = cell;
+                                        board[i][j] = new EmptyCell(j,i);
+                                        cell.setNewPosition(j-1,i);
+                                    }
+                                }catch (Exception e){
 
+                                }
+                                break;
                             }
-                        } else if (direction == 'U') {
-                            try {
-                                newCell = board[i-1][j];
-                                if (cell.isMovePossible(newCell)) {
-                                    board[i-1][j] = cell;
-                                    board[i][j] = new EmptyCell(j,i);
-                                    cell.setNewPosition(j,i-1);
-                                }
-                            }catch (Exception e){
+                            case('U'): {
+                                try {
+                                    newCell = board[i-1][j];
+                                    if (cell.isMovePossible(newCell)) {
+                                        board[i-1][j] = cell;
+                                        board[i][j] = new EmptyCell(j,i);
+                                        cell.setNewPosition(j,i-1);
+                                    }
+                                }catch (Exception e){
 
+                                }
+                                break;
                             }
-                        } else if (direction == 'D') {
-                            try {
-                                newCell = board[i+1][j];
-                                if (cell.isMovePossible(newCell)) {
-                                    board[i+1][j] = cell;
-                                    board[i][j] = new EmptyCell(j,i);
-                                    cell.setNewPosition(j,i+1);
-                                }
-                            }catch (Exception e){
+                            case('D'): {
+                                try {
+                                    newCell = board[i+1][j];
+                                    if (cell.isMovePossible(newCell)) {
+                                        board[i+1][j] = cell;
+                                        board[i][j] = new EmptyCell(j,i);
+                                        cell.setNewPosition(j,i+1);
+                                    }
+                                }catch (Exception e){
 
+                                }
+                                break;
                             }
                         }
                         cell.setMoved(true);
                     }
                     currentPlayer = cell;
-                }else if (board[i][j].getClass().equals(Bomb.class) ){
+                }
+                else if (board[i][j].getClass().equals(Bomb.class) ){
                     /*
                      *
                      * Bomba
@@ -111,7 +121,8 @@ public class Game {
                         //se chegámos ao final, então esta bomba rebenta
                         deployExplosion(bomb, board);
                     }
-                }else if (board[i][j].getClass().equals(Flame.class)){
+                }
+                else if (board[i][j].getClass().equals(Flame.class)){
                     /*
                      *
                      * Chama
@@ -121,7 +132,8 @@ public class Game {
                     Flame flame = (Flame) board[i][j];
                     if (!flame.isDisplay())
                         board[i][j] = putOutFlames(flame);
-                }else if(board[i][j].getClass().equals(Enemy.class)){
+                }
+                else if(board[i][j].getClass().equals(Enemy.class)){
                     Cell newCell, cell;
                     Enemy enemy=(Enemy) board[i][j];
                     char direction= enemy.nextDir(board,currentPlayer);
@@ -130,52 +142,83 @@ public class Game {
                         case('R'): {
                             try {
                                 newCell = board[i][j+1];
-                                if (enemy.isMovePossible(newCell)) {
+                                if(newCell.getClass().equals(Enemy.class)){
+                                    if (currentPlayer.death()==false){
+                                        level= new Level(1);
+                                        board = getCells();
+                                        board[0][0] = currentPlayer;
+
+                                    }
+                                }else if (enemy.isMovePossible(newCell)) {
                                     board[i][j+1] = enemy;
                                     board[i][j] = new EmptyCell(j,i);
                                     enemy.setNewPosition(j+1,i);
                                 }
                             }catch (Exception e){
-
+                                e.printStackTrace();
                             }
+                            break;
                         }case('L'): {
                             try {
                                 newCell = board[i][j-1];
-                                if (enemy.isMovePossible(newCell)) {
+                                if(newCell.getClass().equals(Enemy.class)){
+                                    if (currentPlayer.death()){
+                                        level= new Level(1);
+                                        board = getCells();
+                                        board[0][0] = currentPlayer;
+
+                                    }
+                                }else if (enemy.isMovePossible(newCell)) {
                                     board[i][j-1] = enemy;
                                     board[i][j] = new EmptyCell(j,i);
                                     enemy.setNewPosition(j-1,i);
                                 }
                             }catch (Exception e){
-
+                                e.printStackTrace();
                             }
+                            break;
                         }case('U'): {
                             try {
                                 newCell = board[i-1][j];
-                                if (enemy.isMovePossible(newCell)) {
+                                if(newCell.getClass().equals(Enemy.class)){
+                                    if (currentPlayer.death()){
+                                        level= new Level(1);
+                                        board = getCells();
+                                        board[0][0] = currentPlayer;
+
+                                    }
+                                }else if (enemy.isMovePossible(newCell)) {
                                     board[i-1][j] = enemy;
                                     board[i][j] = new EmptyCell(j,i);
                                     enemy.setNewPosition(j,i-1);
                                 }
                             }catch (Exception e){
-
+                                e.printStackTrace();
                             }
+                            break;
                         }case('D'): {
                             try {
                                 newCell = board[i+1][j];
-                                if (enemy.isMovePossible(newCell)) {
+                                if(newCell.getClass().equals(Enemy.class)){
+                                    if (currentPlayer.death()){
+                                        level= new Level(1);
+                                        board = getCells();
+                                        board[0][0] = currentPlayer;
+
+                                    }
+                                }else if (enemy.isMovePossible(newCell)) {
                                     board[i+1][j] = enemy;
                                     board[i][j] = new EmptyCell(j,i);
                                     enemy.setNewPosition(j,i+1);
                                 }
                             }catch (Exception e){
-
+                                e.printStackTrace();
                             }
+                            break;
                         }
-                        default: break;
                     }
                     enemy.setMoved(true);
-
+                    System.out.println(enemy.getPosX() + " " + enemy.getPosY());
                 }
             }
         }

@@ -1,7 +1,6 @@
 package business;
 
 import presentation.Viewer;
-import presentation.control.Game;
 import presentation.swing.GameViewer;
 
 import java.io.IOException;

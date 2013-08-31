@@ -30,16 +30,16 @@ public class GameViewer extends JFrame implements Viewer
     }
 
     public void play(){
-         game.setPlay();
+        game.setPlay();
     }
 
     public void printGame(){
-         Cell[][] cells = game.getCells();
-         for (int i =0; i<cells.length; ++i){
-             for (int j = 0 ;j<cells[i].length;++j){
-                 cells[i][j].printCell(this);  //board);
-             }
-         }
+        Cell[][] cells = game.getCells();
+        for (int i =0; i<cells.length; ++i){
+            for (int j = 0 ;j<cells[i].length;++j){
+                cells[i][j].printCell(this);  //board);
+            }
+        }
     }
 
     private void buildBehavior()
@@ -54,31 +54,40 @@ public class GameViewer extends JFrame implements Viewer
             public void keyPressed(KeyEvent e) {
                 String text = null;
                 Player currentPlayer = game.getCurrentPlayer();
-                if (e.getKeyCode() == KeyEvent.VK_UP) {
-                    text = "UP";
-                    currentPlayer.setDirection('U');
-                }
-                if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-                    text = "DOWN";
-                    currentPlayer.setDirection('D');
-                }
-                if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-                    text = "RIGHT";
-                    currentPlayer.setDirection('R');
-                }
-                if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-                    text = "LEFT";
-                    currentPlayer.setDirection('L');
-                }
-                if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-                    text = "SPACE";
-                    if (currentPlayer.getBombs()!=0){
-                        game.setBomb();
+                switch (e.getKeyCode()){
+                    case (KeyEvent.VK_UP):{
+                        text = "UP";
+                        currentPlayer.setDirection('U');
+                        break;
+                    }
+                    case (KeyEvent.VK_DOWN): {
+                        text = "DOWN";
+                        currentPlayer.setDirection('D');
+                        break;
+                    }
+                    case (KeyEvent.VK_RIGHT): {
+                        text = "RIGHT";
+                        currentPlayer.setDirection('R');
+                        break;
+                    }
+                    case (KeyEvent.VK_LEFT): {
+                        text = "LEFT";
+                        currentPlayer.setDirection('L');
+                        break;
+                    }
+                    case (KeyEvent.VK_SPACE): {
+                        text = "SPACE";
+                        if (currentPlayer.getBombs()!=0){
+                            game.setBomb();
+                        }
+                        break;
                     }
                 }
-                if (text != null)
+                if (text != null){
                     //JOptionPane.showMessageDialog(GameViewer.this, "You've pressed " + text);
                     System.out.println("You've pressed " + text);
+                }
+
             }
         });
     }

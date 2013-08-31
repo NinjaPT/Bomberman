@@ -46,7 +46,6 @@ public class Enemy extends NonStaticCell {
 //    308	309	310	311	312	313	314	315	316	317	318
 
     private boolean wallPass=false;
-    private int life;
     private double speed=0;
     private int intelligence=0;
     private int score;
@@ -75,7 +74,6 @@ public class Enemy extends NonStaticCell {
         *  8     Pontan      8000    rápido      alta            Sim
         * */
 
-        translateLifePoints(enemyType);
         translateSpeed(enemyType);
         translateIntelligence(enemyType);
         translateWallPass(enemyType);
@@ -150,29 +148,12 @@ public class Enemy extends NonStaticCell {
         }
     }
 
-    private void translateLifePoints(int enemyType){
-        switch(enemyType){
-            case (1): life=100; break;
-            case (2): life=200; break;
-            case (3): life=400; break;
-            case (4): life=800; break;
-            case (5): life=1000; break;
-            case (6): life=2000; break;
-            case (7): life=4000; break;
-            case (8): life=8000; break;
-            default: break;
-        }
-    }
 
     /****************************************************************************************/
 
     // Outros
 
     /****************************************************************************************/
-
-    public int getLife(){
-        return life;
-    }
 
     public int getScore(){
         return score;
@@ -214,6 +195,30 @@ public class Enemy extends NonStaticCell {
     }
 
     @Override
+    public boolean isMovePossible(Cell cell) {
+
+        boolean result = false;
+        if (cell.getClass().equals(Brick.class) && wallPass == true ){
+            result = true;
+        }else if (cell.getClass().equals(Bonus.class)){
+            result = false;
+        }else if (cell.getClass().equals(Gate.class)){
+            result = false;
+        }else if (cell.getClass().equals(EmptyCell.class)){
+            result = true;
+        }else if (cell.getClass().equals(Enemy.class)){
+            result = false;
+        }else if(cell.getClass().equals(Player.class)){
+            result = true;
+        }else{
+            result=false;
+        }
+
+        return result;
+    }
+
+
+    @Override
     public void printCell(GameViewer viewer) {
         viewer.setEnemy(super.getPosX()+1, super.getPosY()+1);
         setMoved(false);
@@ -222,10 +227,10 @@ public class Enemy extends NonStaticCell {
     private char shortestPath(Cell[][] board, Player player){
         List<Vertex> nodes=new ArrayList<Vertex>();
         List<Edge> edges=new ArrayList<Edge>();
-        List<Cell> walls=new ArrayList<Cell>();
         int e_x, e_y;
         e_x=super.getPosX()+1;
         e_y=super.getPosY()+1;
+        int x, y;
 
 
         for(int i=0; i<board.length;i++){
@@ -235,8 +240,8 @@ public class Enemy extends NonStaticCell {
             }
         }
         for(Vertex node:nodes){
-            int i=node.x;
-            int j=node.y;
+            int i=node.x-1;
+            int j=node.y-1;
             Cell cell=board[i][j];
             if(!cell.getClass().equals(Brick.class) && !cell.getClass().equals(SolidPath.class)){
                 //se não for um tipo de wall cria edges
@@ -285,9 +290,19 @@ public class Enemy extends NonStaticCell {
         DijkstraAlgorithm dijkstra = new DijkstraAlgorithm(graph);
         dijkstra.execute(nodes.get(e_x*e_y));
         LinkedList<Vertex> path = dijkstra.getPath(nodes.get(10));
-        int x=path.getFirst().x;
-        int y=path.getFirst().y;
+        try{
+            x=path.getFirst().x;
+            y=path.getFirst().y;
+        }catch (Exception e){
+            x=e_x;
+            y=e_y;
+
+        }
+
         if((e_x-x)==0){
+            if ((e_y - y)==0){
+                return 'U';
+            }
             if ((e_y - y)<0){
                 return 'L';
             }else return 'R';
