@@ -200,15 +200,14 @@ public class Enemy extends Player {
                 if(super.isMoved()==true){
                     return super.getDirection();
                 }else{
-                    char[] array=shortestPath(board, curr_player);
-                    return isPlaceEnemy(board, array[0]);
+                    return shortestPath(board, curr_player);
                 }
             }
             case (3):{
                 //Encontrar o caminho mais curto??
                 //Falta validação de inimigo
-                char[] array=shortestPath(board, curr_player);
-                return isPlaceEnemy(board, array[0]);
+
+                return shortestPath(board, curr_player);
             }
             default: return 'U';
         }
@@ -220,7 +219,7 @@ public class Enemy extends Player {
         setMoved(false);
     }
 
-    private char[] shortestPath(Cell[][] board, Player player){
+    private char shortestPath(Cell[][] board, Player player){
         List<Vertex> nodes=new ArrayList<Vertex>();
         List<Edge> edges=new ArrayList<Edge>();
         List<Cell> walls=new ArrayList<Cell>();
@@ -241,33 +240,43 @@ public class Enemy extends Player {
             Cell cell=board[i][j];
             if(!cell.getClass().equals(Brick.class) && !cell.getClass().equals(SolidPath.class)){
                 //se não for um tipo de wall cria edges
-
-                if(i==0 || i<board.length || j==0 || j<board[i].length){
-                    //tenta 2 ou 3 ligações
-
-                }else{
-                    //tenta 4 ligações
+                //tenta 4 ligações
+                try{
                     cell= board[i-1][j];
                     if(!cell.getClass().equals(Brick.class) && !cell.getClass().equals(SolidPath.class)){
                         //Edge_x.y_x.y
                         Edge lane = new Edge("Edge_"+ i + "." + j + "_" +(i-1)+"."+j ,nodes.get(i*j), nodes.get((i-1)*j), 1);
                         edges.add(lane);
                     }
+                } catch (Exception e){
+                    //Do nothing
+                }
+                try {
                     cell=board[i+1][j];
                     if (!cell.getClass().equals(Brick.class) && !cell.getClass().equals(SolidPath.class)){
                         Edge lane = new Edge("Edge_"+ i + "." + j + "_" +(i+1)+"."+j ,nodes.get(i*j), nodes.get((i+1)*j), 1);
                         edges.add(lane);
                     }
+                } catch (Exception e){
+                    //Do nothing
+                }
+                try {
                     cell=board[i][j-1];
                     if (!cell.getClass().equals(Brick.class) && !cell.getClass().equals(SolidPath.class)){
                         Edge lane = new Edge("Edge_"+ i + "." + j + "_" +i+"."+(j-1) ,nodes.get(i*j), nodes.get(i*(j-1)), 1);
                         edges.add(lane);
                     }
+                } catch (Exception e){
+                    //Do nothing
+                }
+                try {
                     cell=board[i][j+1];
                     if (!cell.getClass().equals(Brick.class) && !cell.getClass().equals(SolidPath.class)){
                         Edge lane = new Edge("Edge_"+ i + "." + j + "_" +i+"."+(j+1) ,nodes.get(i*j), nodes.get(i*(j+1)), 1);
                         edges.add(lane);
                     }
+                } catch (Exception e){
+                    //Do nothing
                 }
             }
 
@@ -279,11 +288,12 @@ public class Enemy extends Player {
         int x=path.getFirst().x;
         int y=path.getFirst().y;
         if((e_x-x)==0){
-        }
-
-
-        char array[]={'a','b'};
-        return array;
+            if ((e_y - y)<0){
+                return 'L';
+            }else return 'R';
+        }else if ((e_x - x)<0){
+            return 'U';
+        }else return 'D';
     }
 
     private char isPlaceEnemy(Cell[][] board, char direction){
