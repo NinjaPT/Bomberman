@@ -1,6 +1,7 @@
 package presentation.control;//package control;
 
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -51,7 +52,8 @@ public class Bonus extends StaticCell {
         player.setFlamePass(true);
     }
 
-    public void printCell(BoardViewer viewer){
+    @Override
+    public void printCell(GameViewer viewer) {
         if (wall)
             viewer.setBrick(super.getPosX()+1, super.getPosY()+1);
         else
@@ -68,12 +70,12 @@ public class Bonus extends StaticCell {
 
     public void deployBonus(Player player){
         switch (bonusType){
-            case('F'): { increaseFlame(player); }
-            case('S'): { increaseSpeed(player); }
-            //case('W'): { setWallPass(player); }
-            case('D'): { setDetonator(player); }
-            case('B'): { increaseBomb(player); }
-            //case('P'): { setFlamePass(player); }
+            case('F'): { increaseFlame(player); break;}
+            case('S'): { increaseSpeed(player); break;}
+            //case('W'): { setWallPass(player); break;}
+            case('D'): { setDetonator(player); break;}
+            case('B'): { increaseBomb(player); break;}
+            //case('P'): { setFlamePass(player); break;}
         }
     }
 }

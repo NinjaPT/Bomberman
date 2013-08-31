@@ -1,6 +1,7 @@
 package presentation.control;//package control;
 
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 public abstract class Cell {
     private int posX;
@@ -36,7 +37,7 @@ public abstract class Cell {
         return isStatic;
     }
 
-    public void printCell(BoardViewer viewer){
+    public void printCell(GameViewer viewer){  //BoardViewer viewer){
         /*switch (cellType){
             case('H'): {break;}
             case('B'): {viewer.setBrick(this.posX,this.posY);break;}

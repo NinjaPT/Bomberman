@@ -5,6 +5,7 @@ import presentation.dijkstra.Edge;
 import presentation.dijkstra.Graph;
 import presentation.dijkstra.Vertex;
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,8 +13,12 @@ import java.util.List;
 import java.util.Random;
 
 
+<<<<<<< HEAD
 public class Enemy extends Player {
 //
+=======
+public class Enemy extends NonStaticCell {
+>>>>>>> 67255addaea0c682ecfbb018a5924fdf5edec668
 //      x=29
 //      y=11
 //    0	    1	2	3	4	5	6	7	8	9	10
@@ -59,7 +64,7 @@ public class Enemy extends Player {
     /****************************************************************************************/
 
     public Enemy(int posX, int posY,int enemyType) {
-        super(posX, posY);
+        super(posX, posY, 'R');
         translateEnemyType(enemyType);
     }
 
@@ -214,8 +219,8 @@ public class Enemy extends Player {
         }
     }
 
-
-    public void printCell(BoardViewer viewer){
+    @Override
+    public void printCell(GameViewer viewer) {
         viewer.setEnemy(super.getPosX()+1, super.getPosY()+1);
         setMoved(false);
     }

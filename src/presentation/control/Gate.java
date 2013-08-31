@@ -1,6 +1,7 @@
 package presentation.control;
 
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,12 +15,22 @@ public class Gate extends StaticCell {
     public Gate(int posX, int posY) {
         super(posX, posY);
     }
-    public void printCell(BoardViewer viewer){
+
+    @Override
+    public void printCell(GameViewer viewer) {
         if (wall)
             viewer.setBrick(super.getPosX()+1, super.getPosY()+1);
         else
             viewer.setGate(super.getPosX()+1, super.getPosY()+1);
     }
+
+    /*
+    public void printCell(BoardViewer viewer){
+        if (wall)
+            viewer.setBrick(super.getPosX()+1, super.getPosY()+1);
+        else
+            viewer.setGate(super.getPosX()+1, super.getPosY()+1);
+    } */
 
     public boolean isWall() {
         return wall;

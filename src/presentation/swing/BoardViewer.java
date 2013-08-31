@@ -54,18 +54,18 @@ public class BoardViewer extends JPanel
     private static final String BOMB_PATH = "C:\\Users\\fabio.a.galvao\\Dropbox\\POO_1213_V\\T3\\images\\Bomberman_Bomb.png";
     */
 
-    private static final String BRICK_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Brick.png";
-    private static final String SOLID_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Solid.png";
-    private static final String EMPTY_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Empty.png";
-    private static final String PLAYER_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_White.png";
-    private static final String ENEMY1_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Balloom.png";
-    private static final String SPEED_BONUS_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Speed.png";
-    private static final String FLAME_BONUS_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Flames.png";
-    private static final String DETONATOR_BONUS_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Detonator.png";
-    private static final String BOMB_BONUS_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Bombs.png";
-    private static final String GATE_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Gate.png";
-    private static final String BOMB_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Bom.jpg";
-    private static final String FLAME_PATH = "/home/fgalvao/Dropbox/POO_1213_V/T3/images/Bomberman_Flame.png";
+    private static final String BRICK_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Brick.png";
+    private static final String SOLID_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Solid.png";
+    private static final String EMPTY_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Empty.png";
+    private static final String PLAYER_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_White.png";
+    private static final String ENEMY1_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Balloom.png";
+    private static final String SPEED_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Speed.png";
+    private static final String FLAME_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Flames.png";
+    private static final String DETONATOR_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Detonator.png";
+    private static final String BOMB_BONUS_PATH = "/home/fgalvao/workspace/Bomberman/Bomberman_Bombs.png";
+    private static final String GATE_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Gate.png";
+    private static final String BOMB_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Bom.jpg";
+    private static final String FLAME_PATH = "/home/fgalvao/workspace/Bomberman/images/Bomberman_Flame.png";
 
     private ElementViewer[][] board = new ElementViewer[COLUMNS][ROWS];
 
@@ -138,7 +138,7 @@ public class BoardViewer extends JPanel
     {
         board[col][row] = new ElementViewer(ENEMY1_PATH);
     }
-    public void setBonus(int col, int row, int bonusType){
+    public void setBonus(int col, int row, char bonusType){
         switch (bonusType){
             case('S'):{board[col][row] = new ElementViewer(SPEED_BONUS_PATH);}
             case('F'):{board[col][row] = new ElementViewer(FLAME_BONUS_PATH);}
@@ -156,7 +156,7 @@ public class BoardViewer extends JPanel
         board[col][row] = new ElementViewer(BOMB_PATH);
     }
 
-    public void writeLevel(Level level, BoardViewer viewer){
+    public void writeLevel(Level level, GameViewer viewer){
         Cell[][] levelInfo = level.getBoard();
         for(int i = 0; i<levelInfo.length;i++){
             for(int j =0; j<levelInfo[i].length; j++){
