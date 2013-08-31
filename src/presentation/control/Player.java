@@ -93,7 +93,7 @@ public class Player extends NonStaticCell {
 
     public boolean death(){
         this.lives--;
-        if (getLives()==0)
+        if (getLives()<0)
             return false;
         return true;
     }

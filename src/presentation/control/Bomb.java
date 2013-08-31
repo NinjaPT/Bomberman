@@ -9,7 +9,7 @@ import java.util.TimerTask;
 
 public class Bomb extends StaticCell{
     private int flame;
-    private int time = 2; //2 segundos
+    private int time = 3; //3 segundos
     private boolean detonator = false;
 
     public Bomb(int posX, int posY, int flame) {
@@ -32,10 +32,6 @@ public class Bomb extends StaticCell{
     public void setTime(int time) {
         this.time = time;
     }
-
-//    public void printCell(BoardViewer viewer){
-//        viewer.setBomb(super.getPosX()+1, super.getPosY()+1);
-//    }
 
     @Override
     public void printCell(GameViewer viewer) {

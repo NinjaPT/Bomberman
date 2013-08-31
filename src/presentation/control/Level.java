@@ -58,7 +58,8 @@ public class Level {
             Scanner scanner = new Scanner(file);
             int i = 0;
             Random r = new Random();
-            char[] bonus= {'S','F','D','B'};
+            char[] bonus={'F','F','F','F'}; //para teste
+            //{'S','F','D','B'};
             while (scanner.hasNextLine()) {
                 String[] lines = scanner.nextLine().split("\\s+");
                 //for (int i = 0; i<lines.length; i++) {

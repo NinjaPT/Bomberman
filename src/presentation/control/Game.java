@@ -3,6 +3,7 @@ package presentation.control;
 public class Game {
     private Level level;
     private Player currentPlayer;
+
     public Game(){
         level= new Level(1);
     }
@@ -254,6 +255,8 @@ public class Game {
             currentPlayer = (Player) flame.getCellBackUp();
             if (currentPlayer.death()){
                 level= new Level(1);
+                Cell[][] board = getCells();
+                board[0][0] = currentPlayer;
                 return currentPlayer;
             }
             return new EmptyCell(flame.getPosX(),flame.getPosY());

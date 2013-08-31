@@ -51,13 +51,6 @@ public class Bonus extends StaticCell {
     private void setFlamePass(Player player){
         player.setFlamePass(true);
     }
-       /*
-    public void printCell(BoardViewer viewer){
-        if (wall)
-            viewer.setBrick(super.getPosX()+1, super.getPosY()+1);
-        else
-            viewer.setBonus(super.getPosX()+1, super.getPosY()+1, bonusType);
-    }    */
 
     @Override
     public void printCell(GameViewer viewer) {

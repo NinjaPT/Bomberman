@@ -37,7 +37,7 @@ public class GameViewer extends JFrame implements Viewer
          Cell[][] cells = game.getCells();
          for (int i =0; i<cells.length; ++i){
              for (int j = 0 ;j<cells[i].length;++j){
-                 cells[i][j].printCell(board);
+                 cells[i][j].printCell(this);  //board);
              }
          }
     }
@@ -130,6 +130,10 @@ public class GameViewer extends JFrame implements Viewer
 
     public void setBonus(int col, int row, char bonusType){
         board.setBonus(col, row, bonusType);
+    }
+
+    public void setFlame(int col, int row){
+        board.setFlame(col, row);
     }
 
 
