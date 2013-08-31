@@ -13,7 +13,7 @@ import java.util.Random;
 
 
 public class Enemy extends Player {
-//Coomentário teste
+
 
 //      x=29
 //      y=11
