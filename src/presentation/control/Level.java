@@ -19,7 +19,7 @@ public class Level {
     }
 
     private boolean loadLevel(int level){
-        final String filename = "/home/fgalvao/Dropbox/POO_1213_V/T3/src/levels/Level_" + level;
+        final String filename = "/home/fgalvao/workspace/Bomberman/src/levels/Level_" + level;
         //final String filename = "C:\\Users\\fabio.a.galvao\\Dropbox\\POO_1213_V\\T3\\src\\levels\\Level_" + level;
         //final String filename = "C:\\Users\\Paulo Torres\\Dropbox\\POO_1213_V\\T3\\src\\levels\\level_" + level;
         //final String filename = "/home/paulo/Dropbox/POO_1213_V/T3/src/levels/Level_" + level;

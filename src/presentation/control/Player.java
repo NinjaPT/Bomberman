@@ -2,6 +2,7 @@ package presentation.control;//package control;
 
 import presentation.Viewer;
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -47,7 +48,7 @@ public class Player extends NonStaticCell {
 
     public void addFlame(){
         int f = getFlameSize();
-        setFlameSize(f++);
+        setFlameSize(++f);
     }
 
     public int getBombs() {
@@ -87,13 +88,13 @@ public class Player extends NonStaticCell {
     }
 
     public void setScore(int score) {
-        this.score = score;
+        this.score += score;
     }
 
     public boolean death(){
+        this.lives--;
         if (getLives()==0)
             return false;
-        this.lives--;
         return true;
     }
 
@@ -110,10 +111,19 @@ public class Player extends NonStaticCell {
         this.lives = lives;
     }
 
-    public void printCell(BoardViewer viewer){
+    @Override
+    public void printCell(GameViewer viewer) {
         viewer.setPlayer(super.getPosX()+1, super.getPosY()+1);
         setMoved(false);
     }
+
+    /*
+    public void printCell(BoardViewer viewer){
+        viewer.setPlayer(super.getPosX()+1, super.getPosY()+1);
+        setMoved(false);
+    } */
+
+
 
     @Override
     public boolean isMovePossible(Cell cell) {

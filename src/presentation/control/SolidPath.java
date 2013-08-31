@@ -1,6 +1,7 @@
 package presentation.control;
 
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +15,13 @@ public class SolidPath extends StaticCell {
     public SolidPath(int posX, int posY) {
         super(posX, posY);
     }
-    public void printCell(BoardViewer viewer){
+
+    @Override
+    public void printCell(GameViewer viewer) {
         viewer.setSolidPath(super.getPosX()+1, super.getPosY()+1);
     }
+    /*
+    public void printCell(BoardViewer viewer){
+        viewer.setSolidPath(super.getPosX()+1, super.getPosY()+1);
+    } */
 }

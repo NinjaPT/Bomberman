@@ -2,6 +2,7 @@ package presentation.control;//package control;
 
 import presentation.Viewer;
 import presentation.swing.BoardViewer;
+import presentation.swing.GameViewer;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -32,7 +33,12 @@ public class Bomb extends StaticCell{
         this.time = time;
     }
 
-    public void printCell(BoardViewer viewer){
+//    public void printCell(BoardViewer viewer){
+//        viewer.setBomb(super.getPosX()+1, super.getPosY()+1);
+//    }
+
+    @Override
+    public void printCell(GameViewer viewer) {
         viewer.setBomb(super.getPosX()+1, super.getPosY()+1);
     }
 

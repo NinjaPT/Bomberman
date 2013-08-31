@@ -21,8 +21,6 @@ public class Game {
 
     /****************************************************************************************/
     public void setPlay(){
-        //TBD Luís
-        //o movimento dos inimigos deverá ser algo idêntico ao que temos aqui neste método
 
         //TODO for each enemy for each set play calculate move accordingly to int level
 
@@ -119,7 +117,9 @@ public class Game {
                      *
                      * */
                     //se for a flame da bomba, temos de ver onde bateu esta flame
-                    board[i][j] = putOutFlames((Flame) board[i][j]);
+                    Flame flame = (Flame) board[i][j];
+                    if (!flame.isDisplay())
+                        board[i][j] = putOutFlames(flame);
                 }else if(board[i][j].getClass().equals(Enemy.class)){
                     Enemy enemy=(Enemy) board[i][j];
                     char nextStep= enemy.nextDir(board,currentPlayer);
@@ -234,7 +234,7 @@ public class Game {
         //se matámos um enemy, então ganhamos pontos e aquela posição passa a vazio
         else if (flame.getCellBackUp().getClass().equals(Enemy.class)){
             Enemy enemy = (Enemy) flame.getCellBackUp();
-            currentPlayer.setScore(currentPlayer.getScore()+enemy.getScore());
+            currentPlayer.setScore(enemy.getScore());
             return new EmptyCell(flame.getPosX(),flame.getPosY());
         }
         //se acertámos num bónus, então temos de fazer display ao bónus em si
@@ -248,6 +248,15 @@ public class Game {
             Gate gate = (Gate) flame.getCellBackUp();
             gate.setWall(false);
             return gate;
+        }
+        //se acertámos no Player, então morre
+        else if (flame.getCellBackUp().getClass().equals(Player.class)){
+            currentPlayer = (Player) flame.getCellBackUp();
+            if (currentPlayer.death()){
+                level= new Level(1);
+                return currentPlayer;
+            }
+            return new EmptyCell(flame.getPosX(),flame.getPosY());
         }
 
         return new EmptyCell(flame.getPosX(),flame.getPosY());
