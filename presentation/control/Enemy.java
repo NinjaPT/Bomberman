@@ -4,7 +4,6 @@ import presentation.dijkstra.DijkstraAlgorithm;
 import presentation.dijkstra.Edge;
 import presentation.dijkstra.Graph;
 import presentation.dijkstra.Vertex;
-import presentation.swing.BoardViewer;
 import presentation.swing.GameViewer;
 
 import java.util.ArrayList;

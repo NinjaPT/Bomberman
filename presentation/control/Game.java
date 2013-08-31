@@ -42,7 +42,7 @@ public class Game {
                  *
                  * */
                 if (board[i][j].getClass().equals(Player.class) ) {
-                // || board[i][j].getClass().equals(Enemy.class)
+                    // || board[i][j].getClass().equals(Enemy.class)
                     //mover o player
                     Player cell = (Player) board[i][j];
                     if (!cell.isMoved()) {
@@ -122,16 +122,61 @@ public class Game {
                     if (!flame.isDisplay())
                         board[i][j] = putOutFlames(flame);
                 }else if(board[i][j].getClass().equals(Enemy.class)){
+                    Cell newCell, cell;
                     Enemy enemy=(Enemy) board[i][j];
-                    char nextStep= enemy.nextDir(board,currentPlayer);
+                    char direction= enemy.nextDir(board,currentPlayer);
 
-                    /*
-                     *
-                     * Cálculo do movimento de inimigo
-                     *
-                     * */
+                    switch (direction){
+                        case('R'): {
+                            try {
+                                newCell = board[i][j+1];
+                                if (enemy.isMovePossible(newCell)) {
+                                    board[i][j+1] = enemy;
+                                    board[i][j] = new EmptyCell(j,i);
+                                    enemy.setNewPosition(j+1,i);
+                                }
+                            }catch (Exception e){
 
-                 }
+                            }
+                        }case('L'): {
+                            try {
+                                newCell = board[i][j-1];
+                                if (enemy.isMovePossible(newCell)) {
+                                    board[i][j-1] = enemy;
+                                    board[i][j] = new EmptyCell(j,i);
+                                    enemy.setNewPosition(j-1,i);
+                                }
+                            }catch (Exception e){
+
+                            }
+                        }case('U'): {
+                            try {
+                                newCell = board[i-1][j];
+                                if (enemy.isMovePossible(newCell)) {
+                                    board[i-1][j] = enemy;
+                                    board[i][j] = new EmptyCell(j,i);
+                                    enemy.setNewPosition(j,i-1);
+                                }
+                            }catch (Exception e){
+
+                            }
+                        }case('D'): {
+                            try {
+                                newCell = board[i+1][j];
+                                if (enemy.isMovePossible(newCell)) {
+                                    board[i+1][j] = enemy;
+                                    board[i][j] = new EmptyCell(j,i);
+                                    enemy.setNewPosition(j,i+1);
+                                }
+                            }catch (Exception e){
+
+                            }
+                        }
+                        default: break;
+                    }
+                    enemy.setMoved(true);
+
+                }
             }
         }
 
@@ -229,10 +274,10 @@ public class Game {
         //se apenas queimámos uma célula vazia, então volta a ser uma célula vazia
         if (flame.getCellBackUp().getClass().equals(EmptyCell.class))
             return flame.getCellBackUp();
-        //se rebentámos um tijolo, então passa a célula vazia
+            //se rebentámos um tijolo, então passa a célula vazia
         else if (flame.getCellBackUp().getClass().equals(Brick.class))
             return new EmptyCell(flame.getPosX(),flame.getPosY());
-        //se matámos um enemy, então ganhamos pontos e aquela posição passa a vazio
+            //se matámos um enemy, então ganhamos pontos e aquela posição passa a vazio
         else if (flame.getCellBackUp().getClass().equals(Enemy.class)){
             Enemy enemy = (Enemy) flame.getCellBackUp();
             currentPlayer.setScore(enemy.getScore());
@@ -264,7 +309,7 @@ public class Game {
 
         return new EmptyCell(flame.getPosX(),flame.getPosY());
 
-     }
+    }
     public void movementPlay(/* orientation , actual position */){
         //método principal que valida a jogada
     }
